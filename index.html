@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maaskom Logistics Private Limited - Trusted logistics service provider." />
+  <title>Maaskom Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="logo-link"><img src="assets/images/Logo-2-scaled-200x36.png" alt="Maaskom Logistics" class="logo"></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>Enjoy! Hassle-Free Delivery Services</h1>
+        <p>Trusted consulting partners with 15+ years of industry experience</p>
+
+        <div class="track-widget" id="trackWidget">
+          <div class="track-tabs">
+            <button class="track-tab active" data-tab="track">Track order</button>
+            <button class="track-tab" data-tab="ship">Ship order</button>
+          </div>
+
+          <!-- Track Order Panel -->
+          <div class="track-panel" id="panelTrack">
+            <div class="track-body">
+              <h3 class="track-heading"><strong>Track</strong> your order through</h3>
+              <div class="track-methods" id="trackMethods">
+                <button class="method-btn" data-method="mobile">Mobile</button>
+                <button class="method-btn active" data-method="awb">AWB</button>
+                <button class="method-btn" data-method="orderid">Order Id</button>
+                <button class="method-btn" data-method="lrn">LRN</button>
+              </div>
+              <input type="text" class="track-input" id="trackInput" placeholder="Enter your AWB number" />
+              <button class="track-submit" id="trackSubmit">Track Order</button>
+              <div class="track-result" id="trackResult"></div>
+            </div>
+          </div>
+
+          <!-- Ship Order Panel (Price Calculator) -->
+          <div class="track-panel hidden" id="panelShip">
+            <div class="track-body">
+              <h3 class="track-heading"><strong>Ship</strong> your order — Price Calculator</h3>
+              <div class="ship-form">
+                <div class="ship-row">
+                  <div class="ship-field">
+                    <label for="shipOrigin">Origin City</label>
+                    <select id="shipOrigin" class="track-input">
+                      <option value="">Select origin</option>
+                      <option value="mumbai">Mumbai</option>
+                      <option value="delhi">Delhi</option>
+                      <option value="bangalore">Bangalore</option>
+                      <option value="chennai">Chennai</option>
+                      <option value="kolkata">Kolkata</option>
+                      <option value="hyderabad">Hyderabad</option>
+                      <option value="pune">Pune</option>
+                      <option value="ahmedabad">Ahmedabad</option>
+                    </select>
+                  </div>
+                  <div class="ship-field">
+                    <label for="shipDest">Destination City</label>
+                    <select id="shipDest" class="track-input">
+                      <option value="">Select destination</option>
+                      <option value="mumbai">Mumbai</option>
+                      <option value="delhi">Delhi</option>
+                      <option value="bangalore">Bangalore</option>
+                      <option value="chennai">Chennai</option>
+                      <option value="kolkata">Kolkata</option>
+                      <option value="hyderabad">Hyderabad</option>
+                      <option value="pune">Pune</option>
+                      <option value="ahmedabad">Ahmedabad</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="ship-row">
+                  <div class="ship-field">
+                    <label for="shipWeight">Weight (kg)</label>
+                    <input type="number" id="shipWeight" class="track-input" placeholder="e.g. 5" min="0.1" step="0.1" />
+                  </div>
+                  <div class="ship-field">
+                    <label for="shipService">Service Type</label>
+                    <select id="shipService" class="track-input">
+                      <option value="road">Road Freight</option>
+                      <option value="air">Air Freight</option>
+                      <option value="ocean">Ocean Freight</option>
+                      <option value="express">Express Delivery</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="track-submit" id="shipCalcBtn">Calculate Price</button>
+                <div class="ship-result" id="shipResult"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">About Our Company</p>
+          <h2>Trusted Logistic Service Provider</h2>
+          <p>At Maaskom Logistics Private Limited, we take pride in being a trusted name in the logistics industry, offering reliable, efficient, and customer-focused services. With a strong commitment to excellence, we provide end-to-end logistics solutions tailored to meet the unique needs of businesses across various sectors.</p>
+          <ul>
+            <li>End-to-End Solutions</li>
+            <li>On-Time Performance</li>
+            <li>Advanced Technology</li>
+            <li>Customer-Centric Approach</li>
+          </ul>
+        </div>
+        <div>
+          <img src="assets/images/nighttime-shipping-port-with-illuminated-containers-cranes.jpg" alt="Shipping port">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <p class="eyebrow center">Our Services</p>
+        <h2 class="center">Our Diversified Portfolio</h2>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <img src="assets/images/Air-Freight.jpg" alt="Air Freight">
+            <div>
+              <h3>Air Freight</h3>
+              <p>Fast and secure air freight services for timely delivery of your high-priority shipments worldwide.</p>
+            </div>
+          </article>
+
+          <article class="service-card reverse">
+            <img src="assets/images/Ocean-Freight.jpg" alt="Ocean Freight">
+            <div>
+              <h3>Ocean Freight</h3>
+              <p>Cost-effective and reliable ocean freight services for smooth international cargo movement across the seas.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/images/Road-Freight.jpg" alt="Road Freight">
+            <div>
+              <h3>Road Freight</h3>
+              <p>Flexible and reliable road freight solutions ensuring timely delivery across all destinations.</p>
+            </div>
+          </article>
+
+          <article class="service-card reverse">
+            <img src="assets/images/Warehousing.jpg" alt="Warehousing">
+            <div>
+              <h3>Warehousing</h3>
+              <p>Secure, scalable, and strategically located warehousing solutions for streamlined storage and distribution.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/images/Global-Shipping.png" alt="Global Shipping">
+            <div>
+              <h3>Global Shipping</h3>
+              <p>Seamlessly connecting businesses worldwide with fast, reliable, and secure global shipping solutions.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why-us">
+      <div class="container">
+        <p class="eyebrow center">Why Choose Us</p>
+        <h2 class="center">Accurate Record Keeping</h2>
+        <div class="grid-4">
+          <article>
+            <span class="icon-circle"><i class="fa-regular fa-clock"></i></span>
+            <h4>On Time Delivery</h4>
+            <p>Ensuring every shipment arrives safely and precisely on time, every time.</p>
+          </article>
+          <article>
+            <span class="icon-circle"><i class="fa-solid fa-check"></i></span>
+            <h4>Efficient Delivery</h4>
+            <p>Swift, accurate, and cost-effective delivery solutions tailored to your needs.</p>
+          </article>
+          <article>
+            <span class="icon-circle"><i class="fa-solid fa-globe"></i></span>
+            <h4>Global Service</h4>
+            <p>Seamless logistics solutions delivered globally with reliability and reach.</p>
+          </article>
+          <article>
+            <span class="icon-circle"><i class="fa-regular fa-calendar"></i></span>
+            <h4>24/7 Support</h4>
+            <p>Round-the-clock support to keep your logistics running smoothly anytime, anywhere.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <p class="eyebrow center">Our Work Process</p>
+        <h2 class="center">We always follow the best ways of logistics</h2>
+        <div class="grid-3">
+          <article class="process-card">
+            <span class="process-icon"><i class="fa-solid fa-box-open"></i></span>
+            <h4>Receive Packages</h4>
+            <p>Effortlessly receive your packages with our reliable and timely delivery services.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-icon"><i class="fa-solid fa-truck-fast"></i></span>
+            <h4>Transport Packages</h4>
+            <p>Secure and efficient transport of your packages delivered safely and on time.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-icon"><i class="fa-solid fa-box-open"></i></span>
+            <h4>Deliver Packages</h4>
+            <p>Swift and dependable package delivery, right to your doorstep every time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats">
+      <div class="container grid-4">
+        <article class="stat-card">
+          <i class="fa-solid fa-ship"></i>
+          <div><h3>8K+</h3><p>Project Completed</p></div>
+        </article>
+        <article class="stat-card">
+          <i class="fa-solid fa-people-group"></i>
+          <div><h3>7K+</h3><p>Happy Customer</p></div>
+        </article>
+        <article class="stat-card">
+          <i class="fa-solid fa-award"></i>
+          <div><h3>12+</h3><p>Expert Team Members</p></div>
+        </article>
+        <article class="stat-card">
+          <i class="fa-solid fa-building"></i>
+          <div><h3>95%</h3><p>Client Retention</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-top">
+      <div>
+        <h3>CONTACT US</h3>
+        <p>Maaskom Logistics Private Limited<br>Office no 320/ B, Arenja Corner<br>Plot No - 71, Sector 17, Vashi<br>Navi Mumbai - 400073<br><br>+91 9909445966<br><br>info@maaskomlogistics.com</p>
+      </div>
+      <div>
+        <h3>QUICK LINKS</h3>
+        <ul class="links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p>&copy;2025 Maaskom Logistics Pvt. Ltd. All Rights Reserved | Developed and Managed by <a href="https://falqonstudio.com/" class="brand-link">Falqon Studio</a></p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
