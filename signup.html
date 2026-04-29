@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create your Maaskom Logistics account – get started with seamless shipment tracking and order management." />
+  <title>Sign Up – Maaskom Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/auth.css" />
+</head>
+<body class="auth-page">
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link"><img src="assets/images/Logo-2-scaled-200x36.png" alt="Maaskom Logistics" class="logo"></a>
+      <nav class="nav" id="nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    </div>
+  </header>
+
+  <!-- Auth Section -->
+  <main class="auth-main">
+    <div class="auth-bg">
+      <div class="auth-overlay"></div>
+    </div>
+
+    <div class="auth-container auth-container--signup">
+      <!-- Left Panel -->
+      <div class="auth-panel auth-left">
+        <div class="auth-brand">
+          <i class="fa-solid fa-boxes-stacked auth-icon"></i>
+          <h2>Join Maaskom</h2>
+          <p>Create your account and get access to our powerful logistics platform — track shipments, get quotes, and manage deliveries all in one place.</p>
+        </div>
+        <ul class="auth-features">
+          <li><i class="fa-solid fa-circle-check"></i> Free account, always</li>
+          <li><i class="fa-solid fa-circle-check"></i> Instant shipment tracking</li>
+          <li><i class="fa-solid fa-circle-check"></i> Multi-city coverage</li>
+          <li><i class="fa-solid fa-circle-check"></i> Dedicated support team</li>
+        </ul>
+        <p class="auth-already">Already have an account? <a href="login.html" class="auth-switch-link">Sign in here</a></p>
+      </div>
+
+      <!-- Right Panel – Form -->
+      <div class="auth-panel auth-right">
+        <div class="auth-card auth-card--signup" id="signupCard">
+          <div class="auth-card-header">
+            <p class="eyebrow">Get Started</p>
+            <h1>Create Account</h1>
+          </div>
+
+          <form class="auth-form" id="signupForm" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="signupFirstName">First Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="signupFirstName" name="firstName" placeholder="First name" autocomplete="given-name" required />
+                </div>
+                <span class="field-error" id="firstNameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="signupLastName">Last Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="signupLastName" name="lastName" placeholder="Last name" autocomplete="family-name" required />
+                </div>
+                <span class="field-error" id="lastNameError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signupEmail">Email Address</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope input-icon"></i>
+                <input type="email" id="signupEmail" name="email" placeholder="you@example.com" autocomplete="email" required />
+              </div>
+              <span class="field-error" id="signupEmailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="signupPhone">Phone Number</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-phone input-icon"></i>
+                <input type="tel" id="signupPhone" name="phone" placeholder="+91 9876543210" autocomplete="tel" />
+              </div>
+              <span class="field-error" id="signupPhoneError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input type="password" id="signupPassword" name="password" placeholder="Min. 8 characters" autocomplete="new-password" required />
+                <button type="button" class="toggle-pw" id="toggleSignupPw" aria-label="Toggle password visibility">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+              <span class="field-error" id="signupPasswordError"></span>
+              <div class="pw-strength" id="pwStrength">
+                <div class="pw-bar" id="pwBar"></div>
+              </div>
+              <span class="pw-strength-label" id="pwStrengthLabel"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="signupConfirm">Confirm Password</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input type="password" id="signupConfirm" name="confirm" placeholder="Re-enter your password" autocomplete="new-password" required />
+                <button type="button" class="toggle-pw" id="toggleConfirmPw" aria-label="Toggle confirm password visibility">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+              <span class="field-error" id="signupConfirmError"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="agreeTerms" required />
+                <span class="checkmark"></span>
+                I agree to the <a href="#" class="auth-switch-link">Terms of Service</a> and <a href="#" class="auth-switch-link">Privacy Policy</a>
+              </label>
+              <span class="field-error" id="termsError"></span>
+            </div>
+
+            <button type="submit" class="auth-btn" id="signupBtn">
+              <span class="btn-text">Create Account</span>
+              <span class="btn-spinner hidden"><i class="fa-solid fa-spinner fa-spin"></i></span>
+            </button>
+
+            <div class="auth-divider"><span>or sign up with</span></div>
+
+            <div class="social-btns">
+              <button type="button" class="social-btn" id="googleSignupBtn">
+                <i class="fa-brands fa-google"></i> Google
+              </button>
+              <button type="button" class="social-btn" id="linkedinSignupBtn">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </button>
+            </div>
+
+            <div class="form-feedback hidden" id="signupFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

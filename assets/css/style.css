@@ -77,6 +77,33 @@ img { max-width: 100%; display: block; }
 
 .nav a:hover { color: var(--accent); }
 
+.nav .nav-login {
+  border: 1.5px solid rgba(255,255,255,0.45);
+  border-radius: 8px;
+  padding: 0.35rem 0.9rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav .nav-login:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav .nav-signup {
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.9rem;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav .nav-signup:hover {
+  background: #c03900;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
 .menu-btn {
   display: none;
   margin-left: auto;
